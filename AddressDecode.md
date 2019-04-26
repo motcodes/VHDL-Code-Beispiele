@@ -9,7 +9,7 @@ use ieee.std_logic_arith.all;
 
 entity addrDec is
   port (
-    addr_i		 : in  std_logic_vector(7 downto 0);
+    addr_i		 : in   std_logic_vector(7 downto 0);
     cs_o			 : out  std_logic_vector(2 downto 0);
     addr0_o		 : out  std_logic_vector(5 downto 0);
     addr1_o		 : out  std_logic_vector(5 downto 0);
