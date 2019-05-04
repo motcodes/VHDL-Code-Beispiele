@@ -44,22 +44,22 @@ architecture rtl of Drehkreuz is
     begin
       case state is
            when closed => 
-					if(card_i='1') then
-                  next_state <= opened;
-					else next_state <= closed;
-					end if;
-					a_o <= '0';
+            if(card_i='1') then
+              next_state <= opened;
+            else next_state <= closed;
+            end if;
+            a_o <= '0';
 
-            when opened => 
-					if(turn_i = '0') then
-                  next_state <= closed;
-					else next_state <= opened;
-					end if;
-               a_o <= '1';
+           when opened => 
+            if(turn_i = '0') then
+              next_state <= closed;
+            else next_state <= opened;
+            end if;
+            a_o <= '1';
 
             when others => 
-               next_state <= closed;
-               a_o <= '0';
+						next_state <= closed;
+             a_o <= '0';
         end case;
     end process; -- state function
 end rtl; -- architecture
